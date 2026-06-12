@@ -1,0 +1,117 @@
+{
+  "neighborhoods": [
+    {
+      "id": 1,
+      "name": "San Fernando",
+      "lat": -34.4735,
+      "lng": -58.4967,
+      "zoom": 14,
+      "buildings": [
+        "Av Libertador 2200",
+        "Av. Las Heras 2400",
+        "Evaristo Uriburu 2600",
+        "Av Santa Fe 2800",
+        "Av Pueyrredón 3000",
+        "Av Córdoba 3200"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Recoleta",
+      "lat": -34.5895,
+      "lng": -58.3869,
+      "zoom": 15,
+      "buildings": [
+        "Av. Del Libertador 500",
+        "Calle Junín 1800",
+        "Av. Álvarez Thomas 2100",
+        "Calle Posadas 1500",
+        "Av. Marcelo T. de Alvear 1200"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Belgrano",
+      "lat": -34.5628,
+      "lng": -58.4520,
+      "zoom": 14,
+      "buildings": [
+        "Av. Sarmiento 3400",
+        "Calle Vuelta de Obligado 1900",
+        "Av. Cabildo 2600",
+        "Calle Arcos 1700",
+        "Av. Conde 2200"
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Palermo",
+      "lat": -34.5814,
+      "lng": -58.4313,
+      "zoom": 15,
+      "buildings": [
+        "Av. Santa Fe 4500",
+        "Calle Soler 1450",
+        "Av. Las Heras 3200",
+        "Calle Gorriti 1800",
+        "Av. Córdoba 5100"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Caballito",
+      "lat": -34.6321,
+      "lng": -58.4436,
+      "zoom": 14,
+      "buildings": [
+        "Av. Donato Álvarez 2300",
+        "Calle Acoyte 1600",
+        "Av. Pedro Goyena 2800",
+        "Calle Teodoro García 1900",
+        "Av. Amorín 2100"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "San Telmo",
+      "lat": -34.6233,
+      "lng": -58.3690,
+      "zoom": 15,
+      "buildings": [
+        "Av. Paseo Colón 1200",
+        "Calle Perú 1100",
+        "Calle Bolívar 1800",
+        "Av. Caseros 2100",
+        "Calle Defensa 1500"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "La Boca",
+      "lat": -34.6360,
+      "lng": -58.3619,
+      "zoom": 15,
+      "buildings": [
+        "Caminito 500",
+        "Av. Pedro de Mendoza 1400",
+        "Calle Brandsen 900",
+        "Calle Garibaldi 1100",
+        "Av. Almirante Brown 1600"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Almagro",
+      "lat": -34.6108,
+      "lng": -58.4070,
+      "zoom": 15,
+      "buildings": [
+        "Av. Corrientes 2800",
+        "Calle Medrano 1900",
+        "Av. Rivadavia 2400",
+        "Calle Sarmiento 2100",
+        "Av. Acoyte 1500"
+      ]
+    }
+  ]
+}

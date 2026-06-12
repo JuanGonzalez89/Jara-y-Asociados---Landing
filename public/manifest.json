@@ -1,0 +1,25 @@
+{
+  "short_name": "Jara y Asociados",
+  "name": "Jara y Asociados - Administración de Consorcios",
+  "description": "Administración profesional de consorcios y edificios en Buenos Aires",
+  "icons": [
+    {
+      "src": "images/JarayAsociados_Logo_ventanaGoogle.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "images/JarayAsociados_Logo_ventanaGoogle.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#809bce",
+  "background_color": "#ffffff",
+  "lang": "es-AR",
+  "orientation": "portrait-primary"
+}

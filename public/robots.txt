@@ -1,0 +1,13 @@
+# https://www.robotstxt.org/robotstxt.html
+# Robots.txt para Jara y Asociados
+
+# Permitir a todos los buscadores indexar todo el sitio
+User-agent: *
+Allow: /
+
+# Bloquear carpetas que no deben indexarse
+Disallow: /static/js/*.map
+Disallow: /static/css/*.map
+
+# Ubicación del Sitemap
+Sitemap: https://jarayasociados.com.ar/sitemap.xml

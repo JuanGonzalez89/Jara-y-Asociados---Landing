@@ -1,0 +1,346 @@
+.internal-admin {
+  background: #809bce;
+  padding: 6rem 0;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.admin-container h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.admin-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+.calendar-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.admin-features-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: var(--calendar-height, auto);
+}
+
+.calendar-image-bg {
+  position: absolute;
+  bottom: -195px;
+  right: -250px;
+  width: 450px;
+  height: auto;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+.admin-features {
+  position: relative;
+  z-index: 1;
+}
+
+/* ==================== GLASSMORPHISM CALENDAR WIDGET ==================== */
+
+.calendar-widget {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  padding: 2rem;
+  border-radius: 24px;
+  color: #2c3e50;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.2),
+    inset 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .admin-container h2 {
+    font-size: 2.8rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .calendar-widget {
+    padding: 1rem;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    background: rgba(255, 255, 255, 0.12);
+    box-shadow:
+      0 8px 18px rgba(26, 41, 63, 0.28);
+  }
+}
+
+@media (max-width: 480px) {
+  .admin-container h2 {
+    font-size: 2.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .calendar-widget {
+    padding: 0.9rem;
+    max-width: 320px;
+    border-radius: 18px;
+    box-shadow:
+      0 6px 14px rgba(26, 41, 63, 0.26);
+  }
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .calendar-grid {
+    gap: 0.26rem;
+    padding: 0.2rem;
+    border-radius: 0;
+    background: transparent;
+    border: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-grid {
+    gap: 0.2rem;
+    padding: 0.15rem;
+  }
+}
+
+/* Header de los días de la semana */
+.calendar-day {
+  text-align: center;
+  font-weight: 600;
+  padding: 0.5rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .calendar-day {
+    font-size: 0.65rem;
+    padding: 0.2rem 0;
+    letter-spacing: 0.5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-day {
+    font-size: 0.55rem;
+    padding: 0.15rem 0;
+    letter-spacing: 0;
+  }
+}
+
+/* Celdas base del calendario */
+.calendar-date {
+  text-align: center;
+  padding: 0.8rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: white;
+  background: transparent;
+  border: 1px solid white;
+}
+
+@media (max-width: 768px) {
+  .calendar-date {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1 / 1;
+    padding: 0;
+    font-size: 0.68rem;
+    border-radius: 8px;
+    box-shadow: none;
+  }
+
+  .calendar-date.date-yellow,
+  .calendar-date.date-blue,
+  .calendar-date.date-green,
+  .calendar-date.date-purple {
+    box-shadow: inset 0 0 4px rgba(255, 255, 255, 0.14);
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-date {
+    padding: 0;
+    font-size: 0.58rem;
+    border-radius: 6px;
+  }
+}
+
+/* Días en rango AMARILLO (1-10) */
+.calendar-date.date-yellow {
+  background: rgba(255, 229, 179, 0.2);
+  color: white;
+  border: 1px solid rgba(255, 229, 179, 0.6);
+  box-shadow: 0 0 15px rgba(255, 229, 179, 0.5), inset 0 0 8px rgba(255, 229, 179, 0.15);
+}
+
+/* Días en rango AZUL (11-20) */
+.calendar-date.date-blue {
+  background: rgba(191, 208, 234, 0.28);
+  color: white;
+  border: 1px solid rgba(191, 208, 234, 0.95);
+  box-shadow: 0 0 14px rgba(191, 208, 234, 0.45), inset 0 0 8px rgba(255, 255, 255, 0.18);
+}
+
+/* Días en rango VERDE (21-25) */
+.calendar-date.date-green {
+  background: rgba(178, 215, 136, 0.2);
+  color: white;
+  border: 1px solid rgba(178, 215, 136, 0.6);
+  box-shadow: 0 0 15px rgba(178, 215, 136, 0.5), inset 0 0 8px rgba(178, 215, 136, 0.15);
+}
+
+/* Días en rango MORADO/ROSA (26-31) */
+.calendar-date.date-purple {
+  background: rgba(230, 212, 230, 0.2);
+  color: white;
+  border: 1px solid rgba(230, 212, 230, 0.6);
+  box-shadow: 0 0 15px rgba(230, 212, 230, 0.5), inset 0 0 8px rgba(230, 212, 230, 0.15);
+}
+
+/* EFECTO HOVER para celdas normales */
+.calendar-date:hover {
+  transform: scale(1.08) translateY(-2px);
+  color: #FFE5B3;
+}
+
+/* EFECTO HOVER para celdas AMARILLAS */
+.calendar-date.date-yellow:hover {
+  background: rgba(255, 229, 179, 0.5);
+  box-shadow: 0 0 20px rgba(255, 229, 179, 0.7), inset 0 0 8px rgba(255, 229, 179, 0.3);
+}
+
+/* EFECTO HOVER para celdas AZULES */
+.calendar-date.date-blue:hover {
+  background: rgba(191, 208, 234, 0.48);
+  box-shadow: 0 0 18px rgba(191, 208, 234, 0.65), inset 0 0 8px rgba(255, 255, 255, 0.22);
+}
+
+/* EFECTO HOVER para celdas VERDES */
+.calendar-date.date-green:hover {
+  background: rgba(192, 240, 208, 0.5);
+  box-shadow: 0 0 20px rgba(192, 240, 208, 0.7), inset 0 0 8px rgba(192, 240, 208, 0.3);
+}
+
+/* EFECTO HOVER para celdas MORADAS/ROSAS */
+.calendar-date.date-purple:hover {
+  background: rgba(230, 212, 230, 0.5);
+  box-shadow: 0 0 20px rgba(230, 212, 230, 0.7), inset 0 0 8px rgba(230, 212, 230, 0.3);
+}
+
+/* ==================== ADMIN FEATURES ==================== */
+
+.admin-features {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  gap: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .admin-features {
+    gap: 1rem;
+  }
+}
+
+.admin-feature {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 1rem 1.2rem;
+  border-radius: 24px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  width: 390px;
+  cursor: pointer;
+}
+
+.admin-feature.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+  transform: translateX(10px);
+}
+
+@media (max-width: 768px) {
+  .admin-feature {
+    width: 100%;
+    padding: 0.8rem 1rem;
+  }
+}
+
+.admin-feature:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+  transform: translateX(10px);
+}
+
+.feature-indicator {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .feature-indicator {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+.admin-feature span {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .admin-feature span {
+    font-size: 0.85rem;
+  }
+}
+
+/* ==================== RESPONSIVE ==================== */
+
+@media (max-width: 968px) {
+  .calendar-section {
+    align-items: center;
+  }
+
+  .admin-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
